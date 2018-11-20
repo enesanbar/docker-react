@@ -8,3 +8,16 @@ before_install:
 
 script:
   - docker run -t enesanbar/react-app npm run test -- --coverage
+
+#deploy:
+#  - provider: elasticbeanstalk
+#    region: "us-west-2"
+#    app: "react-app"
+#    env: "Docker-env"
+#    bucket_name: ""
+#    bucket_path: "react-app"
+#    on:
+#      branch: master
+#    access_key_id: "$AWS_ACCESS_KEY" # Comes from travis-ci env variables
+#    secret_access_key:
+#      secure: "$AWS_SECRET_KEY" # Comes from travis-ci env variables
